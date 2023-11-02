@@ -1,0 +1,16 @@
+services:
+  elastic:
+    container_name: elastic_container
+    build: ./morfologik-elastic
+    networks:
+      - elastic
+    ports:
+      - 9200:9200
+    mem_limit: 2GB
+    environment:
+      ELASTIC_PASSWORD: "qwerty"
+
+
+networks:
+  elastic:
+    name: 'elastic-net'
