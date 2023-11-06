@@ -8,7 +8,8 @@ services:
       - 9200:9200
     mem_limit: 2GB
     environment:
-      ELASTIC_PASSWORD: "qwerty"
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD="qwerty"
 
 
 networks:
